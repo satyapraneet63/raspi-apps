@@ -6,4 +6,4 @@ services:
     volumes:
       - /mnt/legion/Media/Books:/audiobooks
       - /home/bobby/.config/audiobookshelf:/config
-      - /mnt/legion/Media/Books:/metadata
+      - /mnt/legion/Media/Books/Audiobookshelf-metadata:/metadata
