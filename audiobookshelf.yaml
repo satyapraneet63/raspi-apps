@@ -1,9 +1,0 @@
-services:
-  audiobookshelf:
-    image: ghcr.io/advplyr/audiobookshelf:latest
-    ports:
-      - 13378:13378
-    volumes:
-      - /mnt/legion/Media/Books:/audiobooks
-      - /home/bobby/.config/audiobookshelf:/config
-      - /mnt/legion/Media/Books:/metadata
