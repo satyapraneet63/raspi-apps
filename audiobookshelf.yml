@@ -4,6 +4,8 @@ services:
     ports:
       - 13378:80
     volumes:
-      - /mnt/legion/Media/Books:/audiobooks
+      - ${MOUNT_POINT}/Media/Books:/audiobooks
       - /home/bobby/.config/audiobookshelf:/config
-      - /mnt/legion/Media/Books/Audiobookshelf-metadatia:/metadata
+      - ${MOUNT_POINT}Media/Books/Audiobookshelf-metadatia:/metadata
+    env_file:
+      - stack.env
