@@ -4,8 +4,8 @@ services:
     ports:
       - 13378:80
     volumes:
-      - ${MOUNT_POINT}/Media/Books:/audiobooks
+      - MOUNT_POINT/Media/Books:/audiobooks
       - /home/bobby/.config/audiobookshelf:/config
-      - ${MOUNT_POINT}Media/Books/Audiobookshelf-metadatia:/metadata
+      - MOUNT_POINT/Media/Books/Audiobookshelf-metadatia:/metadata
     env_file:
       - stack.env
