@@ -21,7 +21,7 @@ services:
     image: jellyfin/jellyfin
     env_file: '.env'
     container_name: jellyfin
-#    user: 1000:1000
+    user: 0:0
     network_mode: host
     ports:
       - ${JELLYFIN_PORT}:8096
