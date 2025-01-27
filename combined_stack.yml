@@ -43,7 +43,7 @@ services:
       - ${PROWLARR_PORT}:9696
     volumes:
       - ${APP_CONFIG}/Prowlarr/config:/config
-      - ${ARRPATH}/Apps/Prowlarr/backup:/data/Backup
+      - ${ARRPATH}/Apps/Prowlarr:/data/Backup
       - ${ARRPATH}:/downloads
     restart: unless-stopped
 
@@ -56,7 +56,7 @@ services:
       - ${SONARR_PORT}:8989
     volumes:
       - ${APP_CONFIG}/Sonarr/config:/config
-      - ${ARRPATH}/Apps/Sonarr/backup:/data/Backup
+      - ${ARRPATH}/Apps/Sonarr:/data/Backup
       - ${MOUNT_POINT}/Media/TV_Shows:/data/tvshows
       - ${MOUNT_POINT}/Media2/TV_Shows:/data/tvshows2
       - ${ARRPATH}:/downloads
@@ -71,7 +71,7 @@ services:
       - ${RADARR_PORT}:7878
     volumes:
       - ${APP_CONFIG}/Radarr/config:/config
-      - ${ARRPATH}/Apps/Radarr/backup:/data/Backup
+      - ${ARRPATH}/Apps/Radarr:/data/Backup
       - ${MOUNT_POINT}/Media/Movies:/data/movies
       - ${MOUNT_POINT}/Media2/Movies:/data/movies2
       - ${ARRPATH}:/downloads
