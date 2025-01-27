@@ -39,6 +39,7 @@ services:
     env_file: '.env'
     container_name: prowlarr
     hostname: prowlarr
+    user: 0:0
     ports:
       - ${PROWLARR_PORT}:9696
     volumes:
@@ -52,6 +53,7 @@ services:
     env_file: '.env'
     container_name: sonarr
     hostname: sonarr
+    user: 0:0
     ports:
       - ${SONARR_PORT}:8989
     volumes:
@@ -67,6 +69,7 @@ services:
     env_file: '.env'
     container_name: radarr
     hostname: radarr
+    user: 0:0
     ports:
       - ${RADARR_PORT}:7878
     volumes:
@@ -80,6 +83,7 @@ services:
   homarr:
     image: ghcr.io/homarr-labs/homarr:latest
     container_name: homarr
+    user: 0:0
     ports:
       - ${HOMARR_PORT}:7575
     volumes:
