@@ -26,10 +26,10 @@ services:
     ports:
       - ${JELLYFIN_PORT}:8096
     volumes:
-      - /opt/jellyfin/config:/config
-      - /opt/jellyfin/cache:/cache
-      - /opt/jellyfin/data:/data
-      - /opt/jellyfin/log:/log
+#      - /opt/jellyfin/config:/config
+#      - /opt/jellyfin/cache:/cache
+#      - /opt/jellyfin/data:/data
+#      - /opt/jellyfin/log:/log
       - ${MOUNT_POINT}/Media:/media
       - ${MOUNT_POINT}/Media2:/media2
     restart: unless-stopped
