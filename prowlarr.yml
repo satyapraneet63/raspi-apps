@@ -8,6 +8,6 @@ services:
       - ${PROWLARR_PORT}:9696
     volumes:
       - ${APP_CONFIG}/Prowlarr/config:/config
-      - ${ARRPATH}/Prowlarr/backup:/data/Backup
+      - ${ARRPATH}/Apps/Prowlarr:/data/Backup
       - ${ARRPATH}:/downloads
     restart: unless-stopped

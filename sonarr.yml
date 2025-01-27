@@ -8,7 +8,7 @@
       - ${SONARR_PORT}:8989
     volumes:
       - ${APP_CONFIG}/Sonarr/config:/config
-      - ${ARRPATH}/Sonarr/backup:/data/Backup
+      - ${ARRPATH}/Apps/Sonarr:/data/Backup
       - ${MOUNT_POINT}/Media/TV_Shows:/data/tvshows
       - ${MOUNT_POINT}/Media2/TV_Shows:/data/tvshows2
       - ${ARRPATH}:/downloads

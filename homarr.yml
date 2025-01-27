@@ -6,7 +6,7 @@
       - ${HOMARR_PORT}:7575
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ${ARRPATH}/Homarr/configs:/app/data/configs
-      - ${ARRPATH}/Homarr/icons:/app/public/icons
-      - ${ARRPATH}/Homarr/data:/data
+      - ${ARRPATH}/Apps/Homarr/configs:/app/data/configs
+      - ${ARRPATH}/Apps/Homarr/icons:/app/public/icons
+      - ${ARRPATH}/Apps/Homarr/data:/data
     restart: unless-stopped

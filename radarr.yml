@@ -8,7 +8,7 @@
       - ${RADARR_PORT}:7878
     volumes:
       - ${APP_CONFIG}/Radarr/config:/config
-      - ${ARRPATH}/Radarr/backup:/data/Backup
+      - ${ARRPATH}/Apps/Radarr:/data/Backup
       - ${MOUNT_POINT}/Media/Movies:/data/movies
       - ${MOUNT_POINT}/Media2/Movies:/data/movies2
       - ${ARRPATH}:/downloads
