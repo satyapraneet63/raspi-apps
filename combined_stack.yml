@@ -18,7 +18,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
   
   jellyfin:
-    image: docker pull jellyfin/jellyfin:10
+    image: docker pull jellyfin/jellyfin
     env_file: '.env'
     container_name: jellyfin
     user: 0:0
