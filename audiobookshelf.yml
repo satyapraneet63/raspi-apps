@@ -9,4 +9,4 @@ services:
       - ${MOUNT_POINT_BOOKS}:/audiobooks
       - ${MOUNT_POINT_BOOKS_CONFIG}:/config
       - ${MOUNT_POINT_BOOKS_METADATA}:/metadata
-      
+    restart: unless-stopped
