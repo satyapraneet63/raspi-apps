@@ -1,8 +1,7 @@
 services:
   audiobookshelf:
     image: ghcr.io/advplyr/audiobookshelf:latest
-    env_file:
-      - stack.env
+    env_file: stack.env
     ports:
       - ${AUDIOBOOKSHELF_PORT}:80
     volumes:
