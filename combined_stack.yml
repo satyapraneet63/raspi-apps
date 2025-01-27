@@ -26,10 +26,10 @@ services:
     ports:
       - ${JELLYFIN_PORT}:80
     volumes:
-      - ${JELLYFIN_CONFIG_DIR}:/config
-      - ${JELLYFIN_CACHE_DIR}:/cache
-      - ${JELLYFIN_DATA_DIR}:/data
-      - ${JELLYFIN_LOG_DIR}:/log
+#      - ${JELLYFIN_CONFIG_DIR}:/config
+#      - ${JELLYFIN_CACHE_DIR}:/cache
+#      - ${JELLYFIN_DATA_DIR}:/data
+#      - ${JELLYFIN_LOG_DIR}:/log
       - ${MOUNT_POINT}/Media:/media
       - ${MOUNT_POINT}/Media2:/media2
     restart: unless-stopped
