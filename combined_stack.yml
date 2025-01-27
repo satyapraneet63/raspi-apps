@@ -99,6 +99,6 @@ services:
       - ${APP_CONFIG}/qbittorrent/config:/config
       - ${ARRPATH}:/downloads
     ports:
-      - ${WEBUI_PORT}:8090
-      - ${TORRENTING_PORT}:6881
-      - ${TORRENTING_PORT}:6881/udp
+      - ${WEBUI_PORT}:${WEBUI_PORT}
+      - ${TORRENTING_PORT}:${TORRENTING_PORT}
+      - ${TORRENTING_PORT}:${TORRENTING_PORT}/udp
