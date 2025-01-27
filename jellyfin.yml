@@ -1,7 +1,7 @@
 services:
   jellyfin:
     image: jellyfin/jellyfin
-    env_file: 'stack.env'
+    env_file: '.env'
     container_name: jellyfin
     user: 106:112
     network_mode: host
@@ -12,8 +12,8 @@ services:
       - ${JELLYFIN_CACHE_DIR}:/cache
       - ${JELLYFIN_DATA_DIR}:/data
       - ${JELLYFIN_LOG_DIR}:/log
-      - /mnt/legion/Media:/media
-      - /mnt/legion/Media2:/media2
+      - ${MOUNT_POINT}/Media:/media
+      - ${MOUNT_POINT}/Media2:/media2
     restart: unless-stopped
     #extra_hosts:
     #  - 'host.docker.internal:host-gateway'

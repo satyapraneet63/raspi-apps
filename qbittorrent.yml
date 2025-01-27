@@ -1,0 +1,14 @@
+services:
+qbittorrent:
+    image: linuxserver/qbittorrent:latest
+    env_file: '.env'
+    container_name: qbittorrent
+    hostname: qbittorrent
+    restart: unless-stopped
+    volumes:
+      - ${APP_CONFIG}/qbittorrent/config:/config
+      - ${ARRPATH}:/downloads
+    ports:
+      - ${WEBUI_PORT}:8080
+      - ${TORRENTING_PORT}:6881
+      - ${TORRENTING_PORT}:6881/udp
