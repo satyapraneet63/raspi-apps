@@ -119,6 +119,7 @@ services:
     image: lscr.io/linuxserver/bazarr:latest
     env_file: '.env'
     container_name: bazarr
+    user: 1000:1000
     volumes:
       - ${APP_CONFIG}/Bazarr/config:/config
       - ${MOUNT_POINT}/Media/TV_Shows:/data/tvshows
