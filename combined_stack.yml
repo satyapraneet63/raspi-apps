@@ -1,4 +1,15 @@
 services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    user: 0:0
+    ports:
+      - 9443:9443
+    volumes:
+        - /var/lib/docker/volumes/portainer_data/_data/compose/:/data
+        - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+
   audiobookshelf:
     image: ghcr.io/advplyr/audiobookshelf:latest
     env_file: '.env'
@@ -120,14 +131,14 @@ services:
       - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
 
- #  jellyseerr:
- #    image: fallenbagel/jellyseerr:latest
- #   env_file: '.env'
-  #  container_name: jellyseerr
-   # user: 0:0
-    #ports:
-     # - ${JELLYSEER_PORT}:5055
-    #volumes:
-     # - ${APP_CONFIG}/Jellyseer/config:/app/config
-      #- /etc/timezone:/etc/timezone:ro
-    #restart: unless-stopped
+  jellyseerr:
+    image: fallenbagel/jellyseerr:latest
+    env_file: '.env'
+    container_name: jellyseerr
+    user: 0:0
+    ports:
+      - ${JELLYSEER_PORT}:5055
+    volumes:
+      - ${APP_CONFIG}/Jellyseer/config:/app/config
+      - /etc/timezone:/etc/timezone:ro
+    restart: unless-stopped
