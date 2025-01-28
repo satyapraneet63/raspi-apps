@@ -64,6 +64,7 @@ services:
     volumes:
       - ${APP_CONFIG}/Sonarr/config:/config
       - ${ARRPATH}/Apps/Sonarr:/data/Backup
+      - ${MOUNT_POINT}/Media/Anime:/data/anime
       - ${MOUNT_POINT}/Media/TV_Shows:/data/tvshows
       - ${MOUNT_POINT}/Media2/TV_Shows:/data/tvshows2
       - ${ARRPATH}:/downloads
