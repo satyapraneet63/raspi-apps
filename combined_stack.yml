@@ -90,6 +90,7 @@ services:
   
   homarr:
     image: ghcr.io/homarr-labs/homarr:latest
+    env_file: '.env'
     container_name: homarr
     user: 1000:1000
     ports:
@@ -99,6 +100,7 @@ services:
       - ${ARRPATH}/Apps/Homarr/configs:/app/data/configs
       - ${ARRPATH}/Apps/Homarr/icons:/app/public/icons
       - ${ARRPATH}/Apps/Homarr/data:/data
+      - ${ARRPATH}/Apps/Homarr/appdata:/appdata
       - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
 
