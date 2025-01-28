@@ -115,6 +115,20 @@ services:
       - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
 
+  bazarr:
+    image: lscr.io/linuxserver/bazarr:latest
+    env_file: '.env'
+    container_name: bazarr
+    volumes:
+      - ${APP_CONFIG}/Bazarr/config:/config
+      - ${MOUNT_POINT}/Media/TV_Shows:/data/tvshows
+      - ${MOUNT_POINT}/Media2/TV_Shows:/data/tvshows2
+      - ${MOUNT_POINT}/Media/Movies:/data/movies
+      - ${MOUNT_POINT}/Media2/Movies:/data/movies2
+    ports:
+      - ${BAZARR_PORT}:6767
+    restart: unless-stopped
+
   qbittorrent:
     image: linuxserver/qbittorrent:latest
     env_file: '.env'
