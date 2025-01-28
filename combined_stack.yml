@@ -97,10 +97,10 @@ services:
       - ${HOMARR_PORT}:7575
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ${ARRPATH}/Apps/Homarr/configs:/app/data/configs
-      - ${ARRPATH}/Apps/Homarr/icons:/app/public/icons
-      - ${ARRPATH}/Apps/Homarr/data:/data
-      - ${ARRPATH}/Apps/Homarr/appdata:/appdata
+      - ${HOMARR_PATH}/configs:/app/data/configs
+      - ${HOMARR_PATH}/icons:/app/public/icons
+      - ${HOMARR_PATH}/data:/data
+      - ${HOMARR_PATH}/appdata:/appdata
       - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
 
