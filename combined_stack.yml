@@ -9,6 +9,7 @@ services:
       - ${MOUNT_POINT}/Media/Books:/audiobooks
       - ${APP_CONFIG}/audiobookshelf:/config
       - ${MOUNT_POINT}/Media/Books/audiobookshelf-metadata:/metadata
+      - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
 
   watchtower:
@@ -16,6 +17,7 @@ services:
     container_name: watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/timezone:/etc/timezone:ro
   
   jellyfin:
     image: jellyfin/jellyfin
@@ -26,12 +28,13 @@ services:
     ports:
       - ${JELLYFIN_PORT}:8096
     volumes:
-      - /opt/jellyfin/config:/config
-      - /opt/jellyfin/cache:/cache
-      - /opt/jellyfin/data:/data
-      - /opt/jellyfin/log:/log
+      - ${JELLY_LOCATION}/config:/config
+      - ${JELLY_LOCATION}/cache:/cache
+      - ${JELLY_LOCATION}/data:/data
+      - ${JELLY_LOCATION}/log:/log
       - ${MOUNT_POINT}/Media:/media
       - ${MOUNT_POINT}/Media2:/media2
+      - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
   
   prowlarr:
@@ -39,13 +42,14 @@ services:
     env_file: '.env'
     container_name: prowlarr
     hostname: prowlarr
-    user: 0:0
+    user: 1000:1000
     ports:
       - ${PROWLARR_PORT}:9696
     volumes:
       - ${APP_CONFIG}/Prowlarr/config:/config
       - ${ARRPATH}/Apps/Prowlarr:/data/Backup
       - ${ARRPATH}:/downloads
+      - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
 
   sonarr:
@@ -53,7 +57,7 @@ services:
     env_file: '.env'
     container_name: sonarr
     hostname: sonarr
-    user: 0:0
+    user: 1000:1000
     ports:
       - ${SONARR_PORT}:8989
     volumes:
@@ -62,6 +66,7 @@ services:
       - ${MOUNT_POINT}/Media/TV_Shows:/data/tvshows
       - ${MOUNT_POINT}/Media2/TV_Shows:/data/tvshows2
       - ${ARRPATH}:/downloads
+      - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
 
   radarr:
@@ -69,7 +74,7 @@ services:
     env_file: '.env'
     container_name: radarr
     hostname: radarr
-    user: 0:0
+    user: 1000:1000
     ports:
       - ${RADARR_PORT}:7878
     volumes:
@@ -78,12 +83,13 @@ services:
       - ${MOUNT_POINT}/Media/Movies:/data/movies
       - ${MOUNT_POINT}/Media2/Movies:/data/movies2
       - ${ARRPATH}:/downloads
+      - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
   
   homarr:
     image: ghcr.io/homarr-labs/homarr:latest
     container_name: homarr
-    user: 0:0
+    user: 1000:1000
     ports:
       - ${HOMARR_PORT}:7575
     volumes:
@@ -91,6 +97,7 @@ services:
       - ${ARRPATH}/Apps/Homarr/configs:/app/data/configs
       - ${ARRPATH}/Apps/Homarr/icons:/app/public/icons
       - ${ARRPATH}/Apps/Homarr/data:/data
+      - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
 
   qbittorrent:
@@ -99,10 +106,11 @@ services:
     container_name: qbittorrent
     hostname: qbittorrent
     restart: unless-stopped
-    volumes:
-      - ${APP_CONFIG}/qbittorrent/config:/config
-      - ${ARRPATH}:/downloads
     ports:
       - ${WEBUI_PORT}:${WEBUI_PORT}
       - ${TORRENTING_PORT}:${TORRENTING_PORT}
       - ${TORRENTING_PORT}:${TORRENTING_PORT}/udp
+    volumes:
+      - ${APP_CONFIG}/qbittorrent/config:/config
+      - ${ARRPATH}:/downloads
+      - /etc/timezone:/etc/timezone:ro
