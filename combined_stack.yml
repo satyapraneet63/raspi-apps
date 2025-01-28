@@ -107,7 +107,7 @@ services:
     env_file: '.env'
     container_name: qbittorrent
     hostname: qbittorrent
-    user: 1000:1000
+    user: 0:0
     ports:
       - ${WEBUI_PORT}:${WEBUI_PORT}
       - ${TORRENTING_PORT}:${TORRENTING_PORT}
