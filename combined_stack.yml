@@ -92,7 +92,7 @@ services:
     image: ghcr.io/homarr-labs/homarr:latest
     env_file: '.env'
     container_name: homarr
-    user: 1000:1000
+    user: 0:0
     ports:
       - ${HOMARR_PORT}:7575
     volumes:
