@@ -1,15 +1,4 @@
 services:
-  portainer:
-    image: portainer/portainer-ce:latest
-    container_name: portainer
-    user: 0:0
-    ports:
-      - 9443:9443
-    volumes:
-        - /var/lib/docker/volumes/portainer_data/_data/compose/:/data
-        - /var/run/docker.sock:/var/run/docker.sock
-    restart: unless-stopped
-
   audiobookshelf:
     image: ghcr.io/advplyr/audiobookshelf:latest
     env_file: '.env'
