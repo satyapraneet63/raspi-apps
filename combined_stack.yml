@@ -21,10 +21,10 @@ services:
       - /etc/timezone:/etc/timezone:ro
   
   jellyfin:
-    image: jellyfin/jellyfin
+    image: linuxserver/jellyfin:latest
     env_file: '.env'
     container_name: jellyfin
-    user: 0:0
+    user: 1000:1000
     network_mode: host
     ports:
       - ${JELLYFIN_PORT}:8096
@@ -36,6 +36,8 @@ services:
       - ${MOUNT_POINT}/Media:/media
       - ${MOUNT_POINT}/Media2:/media2
       - /etc/timezone:/etc/timezone:ro
+    devices:
+      - /dev/dri:/dev/dri
     restart: unless-stopped
   
   prowlarr:
