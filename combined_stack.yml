@@ -21,7 +21,7 @@ services:
       - /etc/timezone:/etc/timezone:ro
   
   jellyfin:
-    image: linuxserver/jellyfin:latest
+    image: jellyfin/jellyfin:latest
     env_file: '.env'
     container_name: jellyfin
     user: 0:0
