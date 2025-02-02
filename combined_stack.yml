@@ -10,7 +10,6 @@ services:
       - ${MOUNT_POINT}/Media/Books:/audiobooks
       - ${APP_CONFIG}/audiobookshelf:/config
       - ${MOUNT_POINT}/Media/Books/audiobookshelf-metadata:/metadata
-      - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
 
   watchtower:
@@ -18,7 +17,6 @@ services:
     container_name: watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /etc/timezone:/etc/timezone:ro
   
   jellyfin:
     image: jellyfin/jellyfin:latest
@@ -33,7 +31,6 @@ services:
       - ${JELLY_LOCATION}/cache:/cache
       - ${MOUNT_POINT}/Media:/media
       - ${MOUNT_POINT}/Media2:/media2
-      - /etc/timezone:/etc/timezone:ro
     devices:
       - /dev/dri:/dev/dri
     restart: unless-stopped
@@ -44,11 +41,11 @@ services:
     container_name: prowlarr
     hostname: prowlarr
     user: 1000:1000
+    network_mode: "service:gluetun"
     ports:
       - ${PROWLARR_PORT}:9696
     volumes:
       - ${APP_CONFIG}/Prowlarr/config:/config
-      - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
 
   sonarr:
@@ -57,13 +54,13 @@ services:
     container_name: sonarr
     hostname: sonarr
     user: 1000:1000
+    network_mode: "service:gluetun"
     ports:
       - ${SONARR_PORT}:8989
     volumes:
       - ${APP_CONFIG}/Sonarr/config:/config
       - ${MOUNT_POINT}/Media:/data/media
       - ${MOUNT_POINT}/Media2:/data/media2
-      - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
 
   radarr:
@@ -72,13 +69,13 @@ services:
     container_name: radarr
     hostname: radarr
     user: 1000:1000
+    network_mode: "service:gluetun"
     ports:
       - ${RADARR_PORT}:7878
     volumes:
       - ${APP_CONFIG}/Radarr/config:/config
       - ${MOUNT_POINT}/Media:/data/media
       - ${MOUNT_POINT}/Media2:/data/media2
-      - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
   
   homarr:
@@ -94,7 +91,6 @@ services:
       - ${HOMARR_PATH}/icons:/app/public/icons
       - ${HOMARR_PATH}/data:/data
       - ${HOMARR_PATH}/appdata:/appdata
-      - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
 
   bazarr:
@@ -102,6 +98,7 @@ services:
     env_file: '.env'
     container_name: bazarr
     user: 1000:1000
+    network_mode: "service:gluetun"
     ports:
       - ${BAZARR_PORT}:6767
     volumes:
@@ -115,6 +112,7 @@ services:
     env_file: '.env'
     container_name: qbittorrent
     hostname: qbittorrent
+    network_mode: "service:gluetun"
     environment:
       - PUID=0
       - PGID=0
@@ -125,7 +123,6 @@ services:
     volumes:
       - ${APP_CONFIG}/qbittorrent/config:/config
       - ${MOUNT_POINT}/Media2/torrent:/data/torrent
-      - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
 
   jellyseerr:
@@ -137,5 +134,23 @@ services:
       - ${JELLYSEER_PORT}:5055
     volumes:
       - ${APP_CONFIG}/Jellyseer/config:/app/config
-      - /etc/timezone:/etc/timezone:ro
     restart: unless-stopped
+
+  gluetun:
+    image: qmcgaw/gluetun:latest
+    env_file: '.env'
+    container_name: gluetun
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    ports:
+      - ${TORRENTING_PORT}:${TORRENTING_PORT}
+      - ${TORRENTING_PORT}:${TORRENTING_PORT}/udp
+      - ${WEBUI_PORT}:${WEBUI_PORT}
+      - ${PROWLARR_PORT}:9696
+      - ${SONARR_PORT}:8989
+      - ${RADARR_PORT}:7878
+      - ${BAZARR_PORT}:6767
+    volumes:
+      - ${APP_CONFIG}/gluetun/config:/gluetun
