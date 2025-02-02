@@ -39,7 +39,6 @@ services:
     image: linuxserver/prowlarr:latest
     env_file: '.env'
     container_name: prowlarr
-    hostname: prowlarr
     user: 1000:1000
     network_mode: "service:gluetun"
     ports:
@@ -52,7 +51,6 @@ services:
     image: linuxserver/sonarr:latest
     env_file: '.env'
     container_name: sonarr
-    hostname: sonarr
     user: 1000:1000
     network_mode: "service:gluetun"
     ports:
@@ -67,7 +65,6 @@ services:
     image: linuxserver/radarr:latest
     env_file: '.env'
     container_name: radarr
-    hostname: radarr
     user: 1000:1000
     network_mode: "service:gluetun"
     ports:
@@ -97,7 +94,6 @@ services:
     image: lscr.io/linuxserver/bazarr:latest
     env_file: '.env'
     container_name: bazarr
-    hostname: bazarr
     user: 1000:1000
     network_mode: "service:gluetun"
     ports:
@@ -112,7 +108,6 @@ services:
     image: linuxserver/qbittorrent:latest
     env_file: '.env'
     container_name: qbittorrent
-    hostname: qbittorrent
     network_mode: "service:gluetun"
     environment:
       - PUID=0
