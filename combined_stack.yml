@@ -41,8 +41,6 @@ services:
     container_name: prowlarr
     user: 1000:1000
     network_mode: "service:gluetun"
-    ports:
-      - ${PROWLARR_PORT}:9696
     volumes:
       - ${APP_CONFIG}/Prowlarr/config:/config
     restart: unless-stopped
@@ -53,8 +51,6 @@ services:
     container_name: sonarr
     user: 1000:1000
     network_mode: "service:gluetun"
-    ports:
-      - ${SONARR_PORT}:8989
     volumes:
       - ${APP_CONFIG}/Sonarr/config:/config
       - ${MOUNT_POINT}/Media:/data/media
@@ -67,8 +63,6 @@ services:
     container_name: radarr
     user: 1000:1000
     network_mode: "service:gluetun"
-    ports:
-      - ${RADARR_PORT}:7878
     volumes:
       - ${APP_CONFIG}/Radarr/config:/config
       - ${MOUNT_POINT}/Media:/data/media
@@ -96,8 +90,6 @@ services:
     container_name: bazarr
     user: 1000:1000
     network_mode: "service:gluetun"
-    ports:
-      - ${BAZARR_PORT}:6767
     volumes:
       - ${APP_CONFIG}/Bazarr/config:/config
       - ${MOUNT_POINT}/Media:/data/media
@@ -112,10 +104,6 @@ services:
     environment:
       - PUID=0
       - PGID=0
-    ports:
-      - ${WEBUI_PORT}:${WEBUI_PORT}
-      - ${TORRENTING_PORT}:${TORRENTING_PORT}
-      - ${TORRENTING_PORT}:${TORRENTING_PORT}/udp
     volumes:
       - ${APP_CONFIG}/qbittorrent/config:/config
       - ${MOUNT_POINT}/Media2/torrent:/data/torrent
