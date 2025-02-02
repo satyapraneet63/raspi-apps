@@ -97,6 +97,7 @@ services:
     image: lscr.io/linuxserver/bazarr:latest
     env_file: '.env'
     container_name: bazarr
+    hostname: bazarr
     user: 1000:1000
     network_mode: "service:gluetun"
     ports:
@@ -140,6 +141,7 @@ services:
     image: qmcgaw/gluetun:latest
     env_file: '.env'
     container_name: gluetun
+    hostname: gluetun
     cap_add:
       - NET_ADMIN
     devices:
