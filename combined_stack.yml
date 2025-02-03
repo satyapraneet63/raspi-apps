@@ -165,3 +165,8 @@ services:
     volumes:
       - ./mysql:/var/lib/mysql
     restart: unless-stopped
+
+networks:
+  default:
+    external: true
+    name: bobby-home
