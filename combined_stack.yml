@@ -109,16 +109,16 @@ services:
       - ${MOUNT_POINT}/Media2/torrent:/data/torrent
     restart: unless-stopped
 
-  jellyseerr:
-    image: fallenbagel/jellyseerr:latest
-    env_file: '.env'
-    container_name: jellyseerr
-    user: 0:0
-    ports:
-      - ${JELLYSEER_PORT}:5055
-    volumes:
-      - ${APP_CONFIG}/Jellyseer/config:/app/config
-    restart: unless-stopped
+#  jellyseerr:
+#    image: fallenbagel/jellyseerr:latest
+#    env_file: '.env'
+#    container_name: jellyseerr
+#    user: 0:0
+#    ports:
+#      - ${JELLYSEER_PORT}:5055
+#    volumes:
+#      - ${APP_CONFIG}/Jellyseer/config:/app/config
+#    restart: unless-stopped
 
   gluetun:
     image: qmcgaw/gluetun:latest
