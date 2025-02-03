@@ -131,6 +131,8 @@ services:
       - NET_ADMIN
     devices:
       - /dev/net/tun:/dev/net/tun
+    environment:
+      WIREGUARD_PRIVATE_KEY__FILE: /run/secrets/WIREGUARD_PRIVATE_KEY
     ports:
       - ${TORRENTING_PORT}:${TORRENTING_PORT}
       - ${TORRENTING_PORT}:${TORRENTING_PORT}/udp
@@ -170,3 +172,7 @@ networks:
   default:
     external: true
     name: bobby-home
+
+secrets:
+  WIREGUARD_PRIVATE_KEY:
+    file: .secrets/wireguard_private_key.txt
