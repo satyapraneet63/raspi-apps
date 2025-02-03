@@ -161,6 +161,7 @@ services:
   database:
     image: yobasystems/alpine-mariadb:latest
     env_file: '.env'
+    container_name: database
     volumes:
       - ./mysql:/var/lib/mysql
     restart: unless-stopped
