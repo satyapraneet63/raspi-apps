@@ -98,8 +98,8 @@ services:
     container_name: qbittorrent
     network_mode: "service:gluetun"
     environment:
-      - PUID=0
-      - PGID=0
+      - PUID=1000
+      - PGID=1000
     volumes:
       - ${APP_CONFIG}/qbittorrent/config:/config
       - ${MOUNT_POINT}/torrents:/media/torrents
