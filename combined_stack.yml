@@ -95,7 +95,7 @@ services:
   configarr:
     image: ghcr.io/raydak-labs/configarr:latest
     env_file: '.env'
-    container_name: bazarr
+    container_name: configarr
     user: 1000:1000
     network_mode: "service:gluetun"
     volumes:
