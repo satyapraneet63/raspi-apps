@@ -41,7 +41,7 @@ services:
     user: 1000:1000
     network_mode: "service:gluetun"
     volumes:
-      - ${APP_CONFIG}/Prowlarr/config:/config
+      - ${APP_CONFIG}/prowlarr:/config
     restart: unless-stopped
 
   sonarr:
@@ -51,7 +51,7 @@ services:
     user: 1000:1000
     network_mode: "service:gluetun"
     volumes:
-      - ${APP_CONFIG}/Sonarr/config:/config
+      - ${APP_CONFIG}/sonarr:/config
       - ${MOUNT_POINT}:/media
     restart: unless-stopped
 
@@ -62,7 +62,7 @@ services:
     user: 1000:1000
     network_mode: "service:gluetun"
     volumes:
-      - ${APP_CONFIG}/Radarr/config:/config
+      - ${APP_CONFIG}/radarr:/config
       - ${MOUNT_POINT}:/media
     restart: unless-stopped
   
@@ -88,9 +88,21 @@ services:
     user: 1000:1000
     network_mode: "service:gluetun"
     volumes:
-      - ${APP_CONFIG}/Bazarr/config:/config
+      - ${APP_CONFIG}/bazarr:/config
       - ${MOUNT_POINT}:/media
     restart: unless-stopped
+  
+  configarr:
+    image: ghcr.io/raydak-labs/configarr:latest
+    env_file: '.env'
+    container_name: bazarr
+    user: 1000:1000
+    network_mode: "service:gluetun"
+    volumes:
+      - ${APP_CONFIG}/configarr/config:/app/config
+      - ${APP_CONFIG}/configarr/dockerrepos:/app/repos
+      - ${APP_CONFIG}/configarr/custom/cfs:/app/cfs 
+      - ${APP_CONFIG}/configarr/custom/templates:/app/templates
 
   qbittorrent:
     image: linuxserver/qbittorrent:latest
@@ -101,7 +113,7 @@ services:
       - PUID=1000
       - PGID=1000
     volumes:
-      - ${APP_CONFIG}/qbittorrent/config:/config
+      - ${APP_CONFIG}:/config
       - ${MOUNT_POINT}/torrents:/media/torrents
     depends_on:
       - gluetun
@@ -115,7 +127,7 @@ services:
     ports:
       - ${JELLYSEER_PORT}:5055
     volumes:
-      - ${APP_CONFIG}/Jellyseer/config:/app/config
+      - ${APP_CONFIG}/jellyseer:/app/config
     restart: unless-stopped
 
   gluetun:
@@ -136,7 +148,7 @@ services:
       - ${RADARR_PORT}:7878
       - ${BAZARR_PORT}:6767
     volumes:
-      - ${APP_CONFIG}/gluetun/config:/gluetun
+      - ${APP_CONFIG}/gluetun:/gluetun
     restart: always
 
   nginx-proxy-manager:
