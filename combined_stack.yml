@@ -103,6 +103,7 @@ services:
       - ${APP_CONFIG}/configarr/dockerrepos:/app/repos
       - ${APP_CONFIG}/configarr/custom/cfs:/app/cfs 
       - ${APP_CONFIG}/configarr/custom/templates:/app/templates
+    restart: unless-stopped
 
   qbittorrent:
     image: linuxserver/qbittorrent:latest
