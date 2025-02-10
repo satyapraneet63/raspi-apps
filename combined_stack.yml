@@ -99,7 +99,7 @@ services:
     user: 1000:1000
     network_mode: "service:gluetun"
     volumes:
-      - ${APP_CONFIG}/recyclarr:config
+      - ${APP_CONFIG}/recyclarr:/config
     restart: unless-stopped
 
   qbittorrent:
