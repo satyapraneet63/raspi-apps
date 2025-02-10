@@ -1,5 +1,5 @@
 radarr:
-  instance:
+  radarr:
     base_url: http://gluetun:7878
     api_key: 24d9ddf60059457a9612a6cc4fd42c2b
 
@@ -52,7 +52,7 @@ radarr:
           - name: Remux-1080p - Anime
 
 sonarr:
-  instance:
+  sonarr:
     base_url: http://gluetun:8989
     api_key: aa60032e7b5a43f192ccc8070e846c64
     
