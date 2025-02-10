@@ -92,17 +92,14 @@ services:
       - ${MOUNT_POINT}:/media
     restart: unless-stopped
   
-  configarr:
-    image: ghcr.io/raydak-labs/configarr:latest
+  recyclarr:
+    image: ghcr.io/recyclarr/recyclarr:latest
     env_file: '.env'
-    container_name: configarr
+    container_name: recyclarr
     user: 1000:1000
     network_mode: "service:gluetun"
     volumes:
-      - ${APP_CONFIG}/configarr/config:/app/config
-      - ${APP_CONFIG}/configarr/dockerrepos:/app/repos
-      - ${APP_CONFIG}/configarr/custom/cfs:/app/cfs 
-      - ${APP_CONFIG}/configarr/custom/templates:/app/templates
+      - ${APP_CONFIG}/recyclarr/config:config
     restart: unless-stopped
 
   qbittorrent:
