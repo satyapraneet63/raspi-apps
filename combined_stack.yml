@@ -117,17 +117,6 @@ services:
       - gluetun
     restart: unless-stopped
 
-  jellyseerr:
-    image: fallenbagel/jellyseerr:latest
-    env_file: '.env'
-    container_name: jellyseerr
-    user: 0:0
-    ports:
-      - ${JELLYSEER_PORT}:5055
-    volumes:
-      - ${APP_CONFIG}/jellyseer:/app/config
-    restart: unless-stopped
-
   gluetun:
     image: qmcgaw/gluetun:latest
     env_file: '.env'
@@ -140,6 +129,7 @@ services:
     ports:
       - ${TORRENTING_PORT}:${TORRENTING_PORT}
       - ${TORRENTING_PORT}:${TORRENTING_PORT}/udp
+      - ${TORRENTING_PORT}:${TORRENTING_PORT}/tcp
       - ${WEBUI_PORT}:${WEBUI_PORT}
       - ${PROWLARR_PORT}:9696
       - ${SONARR_PORT}:8989
