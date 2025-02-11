@@ -33,7 +33,7 @@ services:
     env_file: '.env'
     container_name: prowlarr
     user: 1000:1000
-    #network_mode: "service:gluetun"
+    network_mode: "service:gluetun"
     volumes:
       - ${APP_CONFIG}/prowlarr:/config
     restart: unless-stopped
@@ -43,7 +43,7 @@ services:
     env_file: '.env'
     container_name: sonarr
     user: 1000:1000
-    #network_mode: "service:gluetun"
+    network_mode: "service:gluetun"
     volumes:
       - ${APP_CONFIG}/sonarr:/config
       - ${MOUNT_POINT}:/media
@@ -54,7 +54,7 @@ services:
     env_file: '.env'
     container_name: radarr
     user: 1000:1000
-    #network_mode: "service:gluetun"
+    network_mode: "service:gluetun"
     volumes:
       - ${APP_CONFIG}/radarr:/config
       - ${MOUNT_POINT}:/media
@@ -80,7 +80,7 @@ services:
     env_file: '.env'
     container_name: bazarr
     user: 1000:1000
-    #network_mode: "service:gluetun"
+    network_mode: "service:gluetun"
     volumes:
       - ${APP_CONFIG}/bazarr:/config
       - ${MOUNT_POINT}:/media
@@ -91,7 +91,7 @@ services:
     env_file: '.env'
     container_name: recyclarr
     user: 1000:1000
-    #network_mode: "service:gluetun"
+    network_mode: "service:gluetun"
     volumes:
       - ${APP_CONFIG}/recyclarr:/config
     restart: unless-stopped
@@ -100,15 +100,15 @@ services:
     image: linuxserver/qbittorrent:latest
     env_file: '.env'
     container_name: qbittorrent
-    #network_mode: "service:gluetun"
+    network_mode: "service:gluetun"
     environment:
       - PUID=1000
       - PGID=1000
     volumes:
       - ${APP_CONFIG}:/config
       - ${MOUNT_POINT}/torrents:/media/torrents
-    #depends_on:
-      #- gluetun
+    depends_on:
+      - gluetun
     restart: unless-stopped
 
   gluetun:
