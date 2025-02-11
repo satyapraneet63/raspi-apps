@@ -11,12 +11,6 @@ services:
       - ${APP_CONFIG}/audiobookshelf:/config
       - ${MOUNT_POINT}/media/books/.audiobookshelf-metadata:/metadata
     restart: unless-stopped
-
-  watchtower:
-    image: containrrr/watchtower
-    container_name: watchtower
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
   
   jellyfin:
     image: jellyfin/jellyfin:latest
