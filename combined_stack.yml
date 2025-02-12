@@ -159,5 +159,5 @@ services:
 
 networks:
   default:
-    external: true
+    driver: bridge
     name: bobby-home
