@@ -132,20 +132,8 @@ services:
       - ${BAZARR_PORT}:6767
     volumes:
       - ${APP_CONFIG}/gluetun:/gluetun
+      - ${APP_CONFIG}/gluetun/auth/config.toml:/gluetun/auth/config.toml:ro
     restart: always
-
-  qbittorrent-natmap:
-    image: ghcr.io/soxfor/qbittorrent-natmap:latest
-    container_name: qbittorrent-natmap
-    restart: unless-stopped
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-    network_mode: "service:gluetun"
-    depends_on:
-      qbittorrent:
-        condition: service_started
-      gluetun:
-        condition: service_started  
 
   nginx-proxy-manager:
     image: jc21/nginx-proxy-manager:latest
