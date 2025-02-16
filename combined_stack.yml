@@ -122,9 +122,6 @@ services:
     devices:
       - /dev/net/tun:/dev/net/tun
     ports:
-      - ${TORRENTING_PORT}:${TORRENTING_PORT}
-      - ${TORRENTING_PORT}:${TORRENTING_PORT}/udp
-      - ${TORRENTING_PORT}:${TORRENTING_PORT}/tcp
       - ${WEBUI_PORT}:${WEBUI_PORT}
       - ${PROWLARR_PORT}:9696
       - ${SONARR_PORT}:8989
