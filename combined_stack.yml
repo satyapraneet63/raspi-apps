@@ -99,6 +99,7 @@ services:
   gluetun:
     image: qmcgaw/gluetun
     container_name: gluetun
+    env_file: '.env'
     cap_add:
       - NET_ADMIN
     # The sysctl disable below is recommended for simpler IPv4-only setups.
