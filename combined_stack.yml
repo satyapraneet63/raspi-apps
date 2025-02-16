@@ -109,7 +109,7 @@ services:
       - ${MOUNT_POINT}/torrents:/media/torrents
     depends_on:
       gluetun:
-        condition: service_healthy
+        condition: service_started
     restart: unless-stopped
 
   gluetun:
@@ -145,7 +145,7 @@ services:
       qbittorrent:
         condition: service_started
       gluetun:
-        condition: service_healthy  
+        condition: service_started  
 
   nginx-proxy-manager:
     image: jc21/nginx-proxy-manager:latest
