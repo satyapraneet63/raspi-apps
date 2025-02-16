@@ -108,7 +108,8 @@ services:
       - ${APP_CONFIG}:/config
       - ${MOUNT_POINT}/torrents:/media/torrents
     depends_on:
-      - gluetun
+      - gluetun:
+        condition: service_healthy
     restart: unless-stopped
 
   gluetun:
@@ -129,10 +130,22 @@ services:
       - ${SONARR_PORT}:8989
       - ${RADARR_PORT}:7878
       - ${BAZARR_PORT}:6767
-      - 9000:9000
     volumes:
       - ${APP_CONFIG}/gluetun:/gluetun
     restart: always
+
+  qbittorrent-natmap:
+    image: ghcr.io/soxfor/qbittorrent-natmap:latest
+    container_name: qbittorrent-natmap
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    network_mode: "service:gluetun"
+    depends_on:
+      qbittorrent:
+        condition: service_started
+      gluetun:
+        condition: service_healthy  
 
   nginx-proxy-manager:
     image: jc21/nginx-proxy-manager:latest
