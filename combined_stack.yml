@@ -108,7 +108,7 @@ services:
       - ${APP_CONFIG}:/config
       - ${MOUNT_POINT}/torrents:/media/torrents
     depends_on:
-      - gluetun:
+      gluetun:
         condition: service_healthy
     restart: unless-stopped
 
