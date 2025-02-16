@@ -99,6 +99,7 @@ services:
   gluetun:
     image: qmcgaw/gluetun
     container_name: gluetun
+    hostname: gluetun
     env_file: '.env'
     cap_add:
       - NET_ADMIN
