@@ -96,44 +96,50 @@ services:
       - ${APP_CONFIG}/recyclarr:/config
     restart: unless-stopped
 
-  qbittorrent:
-    image: linuxserver/qbittorrent:latest
-    env_file: '.env'
-    container_name: qbittorrent
-    network_mode: "service:gluetun"
-    environment:
-      - PUID=1000
-      - PGID=1000
-    volumes:
-      - ${APP_CONFIG}:/config
-      - ${MOUNT_POINT}/torrents:/media/torrents
-    depends_on:
-      gluetun:
-        condition: service_started
-    restart: unless-stopped
-
   gluetun:
-    image: qmcgaw/gluetun:latest
-    env_file: '.env'
+    image: qmcgaw/gluetun
     container_name: gluetun
-    hostname: gluetun
     cap_add:
       - NET_ADMIN
-    devices:
-      - /dev/net/tun:/dev/net/tun
+    # The sysctl disable below is recommended for simpler IPv4-only setups.
+    # If you have IPv6, you can remove that line.
+    sysctls:
+      net.ipv6.conf.all.disable_ipv6: 1
+    volumes:
+      - ${APP_CONFIG}/gluetun:/gluetun
+      - ${APP_CONFIG}/gluetun/auth/config.toml:/gluetun/auth/config.toml:ro
+    environment:
+      - VPN_SERVICE_PROVIDER=protonvpn  # or 'protonvpn' if you prefer Gluetun's built-in provider logic
+      - VPN_TYPE=wireguard
+      - WIREGUARD_PRIVATE_KEY=AIar1YZ2SFmHjV+0JGzPsiKwsqVJl901q880+rbULE8=
+      - VPN_PORT_FORWARDING=on
+      - HTTP_CONTROL_SERVER=on  # Enables the control API for managing Gluetun
+      - HTTP_CONTROL_SERVER_AUTH_CONFIG_FILEPATH=/gluetun/auth/config.toml  # Explicitly define the auth config file`1  `
     ports:
-#      - ${TORRENTING_PORT}:${TORRENTING_PORT}
-#      - ${TORRENTING_PORT}:${TORRENTING_PORT}/udp
-#      - ${TORRENTING_PORT}:${TORRENTING_PORT}/tcp
-      - ${WEBUI_PORT}:${WEBUI_PORT}
+      # Next line publishes qBittorrent WebUI port to the LAN *via* Gluetun:
+      - "8090:8080/tcp"
       - ${PROWLARR_PORT}:9696
       - ${SONARR_PORT}:8989
       - ${RADARR_PORT}:7878
       - ${BAZARR_PORT}:6767
+    restart: unless-stopped
+  
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    network_mode: "service:gluetun"
+    depends_on:
+      gluetun:
+        condition: service_healthy
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - WEBUI_PORT=8080
+      - QBITTORRENT_INTERFACE=tun0
     volumes:
-      - ${APP_CONFIG}/gluetun:/gluetun
-      - ${APP_CONFIG}/gluetun/auth/config.toml:/gluetun/auth/config.toml:ro
-    restart: always
+      - ${APP_CONFIG}:/config
+      - ${MOUNT_POINT}/torrents:/media/torrents
+    restart: unless-stopped
 
   nginx-proxy-manager:
     image: jc21/nginx-proxy-manager:latest
