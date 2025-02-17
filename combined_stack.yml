@@ -111,14 +111,13 @@ services:
       - ${APP_CONFIG}/gluetun:/gluetun
       - ${APP_CONFIG}/gluetun/auth/config.toml:/gluetun/auth/config.toml:ro
     environment:
-      - VPN_SERVICE_PROVIDER=protonvpn  # or 'protonvpn' if you prefer Gluetun's built-in provider logic
+      - VPN_SERVICE_PROVIDER=protonvpn
       - VPN_TYPE=wireguard
       - WIREGUARD_PRIVATE_KEY=AIar1YZ2SFmHjV+0JGzPsiKwsqVJl901q880+rbULE8=
       - VPN_PORT_FORWARDING=on
       - HTTP_CONTROL_SERVER=on  # Enables the control API for managing Gluetun
       - HTTP_CONTROL_SERVER_AUTH_CONFIG_FILEPATH=/gluetun/auth/config.toml  # Explicitly define the auth config file`1  `
     ports:
-      # Next line publishes qBittorrent WebUI port to the LAN *via* Gluetun:
       - "8090:8080/tcp"
       - ${PROWLARR_PORT}:9696
       - ${SONARR_PORT}:8989
@@ -138,6 +137,9 @@ services:
       - PGID=1000
       - WEBUI_PORT=8080
       - QBITTORRENT_INTERFACE=tun0
+      - DOCKER_MODS=ghcr.io/satyapraneet63/gsp-qbittorent-gluetun-sync-port-mod-arm64:main
+      - GSP_GTN_API_KEY=M8jPStro7iMiCMLQUTSTfh
+      - GSP_MINIMAL_LOGS=false
     volumes:
       - ${APP_CONFIG}:/config
       - ${MOUNT_POINT}/torrents:/media/torrents

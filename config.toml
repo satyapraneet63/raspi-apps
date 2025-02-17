@@ -1,6 +1,6 @@
+# remember to copy this file into the /gluetun/auth/config.yoml later.
 [[roles]]
-name = "t-anc/GSP-Qbittorent-Gluetun-sync-port-mod"
+name = "satyapraneet63/gsp-qbittorent-gluetun-sync-port-mod-arm64"
 routes = ["GET /v1/openvpn/portforwarded"]
 auth = "apikey"
-# This is an example apikey, generate your own.
 apikey = "M8jPStro7iMiCMLQUTSTfh"
