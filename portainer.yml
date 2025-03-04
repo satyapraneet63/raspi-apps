@@ -9,3 +9,9 @@ services:
         - /var/lib/docker/volumes/portainer_data/_data/compose/:/data
         - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
+
+networks:
+  default:
+    external: true
+    driver: bridge
+    name: bobby-home
