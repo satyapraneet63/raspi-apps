@@ -16,7 +16,10 @@ movies/Playtime 1967 Criterion (1080p Bluray x265 HEVC 10bit AAC 2.0 French Tigo
 movies/Upgrade (2018) [tmdbid-500664]
 movies/Dune (1984)
 movies/Tillu Square (2024)
+movies/The Lighthouse (2019) [tmdbid-503919]
 movies/Lawrence of Arabia (1962) [tmdbid-947]
+movies/Apocalypto (2006) [tmdbid-1579]
+movies/The Passion of the Christ (2004) [tmdbid-615]
 movies/Kai Po Che (2013) [720p] [BluRay] [YTS.MX]
 movies/Nice Guys, The (2016) [1080p]
 movies/Nice Guys, The (2016) [1080p]/Featurettes
@@ -70,6 +73,7 @@ movies/The.Lord.of.the.Rings.The.Two.Towers.2002.EXTENDED.REMASTERED.1080p.BluRa
 movies/The.Lord.of.the.Rings.The.Two.Towers.2002.EXTENDED.REMASTERED.1080p.BluRay.x265-RARBG/Subs
 movies/Rakht Charitra (2010) [tmdbid-49028]
 movies/Geetha Govindam (2018)
+movies/Get Out (2017) [tmdbid-419430]
 movies/Kikis Delivery Service (1989) [tmdbid-16859]
 movies/Premalu (2024)
 movies/Tumbbad.2018.Hindi.1080p
@@ -82,6 +86,7 @@ movies/Tron (1982) [tmdbid-97]
 movies/Sin City EXTENDED and UNRATED (2005) [1080p]
 movies/The Day of the Jackal (1973) [tmdbid-4909]
 movies/Monkey Man (2024) [tmdbid-560016]
+movies/The Last Temptation of Christ (1988) [tmdbid-11051]
 movies/Ghost in the Shell (1995) [tmdbid-9323]
 movies/Redline (2009) [tmdbid-71883]
 movies/Bhavesh Joshi Superhero (2018) [tmdbid-527511]
