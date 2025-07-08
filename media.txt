@@ -6,15 +6,14 @@ movies/Buffalo '66 (1998) [tmdbid-9464]
 movies/Ludo 2020 Hindi 720p NF WEBRip AAC 5.1 MSubs x264 - LOKiHD - Telly
 movies/Valhalla rising-Regno di sangue (2009) ITA-ENG Ac3 5.1 BDRip 1080p H264 [ArMor]
 movies/Oye Lucky! Lucky Oye! (2009) [720p]
-movies/Late Night with the Devil (2024) [tmdbid-938614]
-movies/The.Big.Short.2015.720p.BRRip.x264.AAC-ETRG
+movies/Sita Ramam (2022) [tmdbid-894803]
 movies/Oppenheimer.2023.1080p.BluRay.DD5.1.x264-GalaxyRG[TGx]
 movies/Virgin Suicides, The (1999) [1080p]
 movies/Virgin Suicides, The (1999) [1080p]/Featurettes
 movies/Dune.2021.1080p.HDRip.X264-EVO[TGx]
 movies/Playtime 1967 Criterion (1080p Bluray x265 HEVC 10bit AAC 2.0 French Tigole)
 movies/Playtime 1967 Criterion (1080p Bluray x265 HEVC 10bit AAC 2.0 French Tigole)/Featurettes
-movies/Killer, The (2023) [1080p]
+movies/Upgrade (2018) [tmdbid-500664]
 movies/Dune (1984)
 movies/Tillu Square (2024)
 movies/Lawrence of Arabia (1962) [tmdbid-947]
@@ -23,33 +22,34 @@ movies/Nice Guys, The (2016) [1080p]
 movies/Nice Guys, The (2016) [1080p]/Featurettes
 movies/Hero (2002) [720p]
 movies/Jin-Roh - The Wolf Brigade (1999)
+movies/The Cat Returns (2002) [tmdbid-15370]
 movies/Salim Langde Pe Mat Ro (1989) [DVDRiP]
 movies/Salim Langde Pe Mat Ro (1989) [DVDRiP]/Screenshots
 movies/That's Cunning! Shijo Saidai no Sakusen? (1996) [tmdbid-80303]
-movies/Murder on the Orient Express (1974) [1080p]
+movies/City of God (2002) [tmdbid-598]
 movies/Twin Peaks Fire Walk with Me (1992) [tmdbid-1923]
+movies/District 9 (2009) [tmdbid-17654]
+movies/The Menu (2022) [tmdbid-593643]
+movies/Pink (2016) [tmdbid-415358]
 movies/Hridayam (2022) [tmdbid-653221]
-movies/The Princess Bride (1987) [2160p] [4K] [BluRay] [5.1] [YTS.MX]
+movies/Maharaja (2024) [tmdbid-1118224]
 movies/The.Lord.of.the.Rings.The.Fellowship.of.the.Ring.2001.EXTENDED.REMASTERED.1080p.BluRay.x265-RARBG
 movies/The.Lord.of.the.Rings.The.Fellowship.of.the.Ring.2001.EXTENDED.REMASTERED.1080p.BluRay.x265-RARBG/Subs
 movies/Sicario.2015.1080p.BluRay.x265-RARBG
 movies/Sicario.2015.1080p.BluRay.x265-RARBG/Subs
 movies/Requiem For A Dream DIRECTOR'S CUT (2000) [1080p]
 movies/In Bruges (2008) [1080p]
-movies/Nobody (2021) [1080p] [WEBRip] [5.1] [YTS.MX]
 movies/Company (2002) [tmdbid-15761]
 movies/Band Baaja Baaraat (2010) [tmdbid-52696]
-movies/Death Wish (1974) [tmdbid-13939]
 movies/TRON - Legacy (2010) (1080p BluRay x265 HEVC 10bit AAC 7.1 Tigole)
 movies/TRON - Legacy (2010) (1080p BluRay x265 HEVC 10bit AAC 7.1 Tigole)/Featurettes
 movies/The.Lord.of.the.Rings.The.Return.of.the.King.2003.EXTENDED.REMASTERED.1080p.BluRay.x265-RARBG
 movies/The.Lord.of.the.Rings.The.Return.of.the.King.2003.EXTENDED.REMASTERED.1080p.BluRay.x265-RARBG/Subs
-movies/Pushpa.-.The.Rule.-.Part.2.2024.1080p
+movies/Omkara (2006) [tmdbid-14705]
 movies/Dhoom (2004) [tmdbid-17478]
 movies/Monica O My Darling (2022) [tmdbid-915831]
-movies/Big.Hero.6.2014.1080p
+movies/HIT The 2nd Case (2022) [tmdbid-811945]
 movies/Harold and Kumar - Escape From Guantanamo Bay (2008) [720p]
-movies/John.Wick.2014.1080p
 movies/Shiva (1990) [tmdbid-109001]
 movies/Alita- Battle Angel (2019)
 movies/Fallen.Angels.1995.CHINESE.RESTORED.1080p.BluRay.x265-VXT
@@ -64,11 +64,13 @@ movies/Sonu Ke Titu Ki Sweety (2018) [BluRay] [1080p] [YTS.AM]
 movies/The Good the Bad and the Ugly (1966) [tmdbid-429]
 movies/Satya (1998) [tmdbid-21502]
 movies/Vicky Donor 2012 Hindi 1080p [FOXM.TO]
+movies/Sirf Ek Bandaa Kaafi Hai (2023) [tmdbid-1123960]
+movies/HIT The Third Case (2025) [tmdbid-1060046]
 movies/The.Lord.of.the.Rings.The.Two.Towers.2002.EXTENDED.REMASTERED.1080p.BluRay.x265-RARBG
 movies/The.Lord.of.the.Rings.The.Two.Towers.2002.EXTENDED.REMASTERED.1080p.BluRay.x265-RARBG/Subs
-movies/John Wick - Chapter 2 (2017) 1080p
 movies/Rakht Charitra (2010) [tmdbid-49028]
 movies/Geetha Govindam (2018)
+movies/Kikis Delivery Service (1989) [tmdbid-16859]
 movies/Premalu (2024)
 movies/Tumbbad.2018.Hindi.1080p
 movies/Palm Springs (2020) [1080p] [WEBRip] [5.1] [YTS.MX]
@@ -79,14 +81,13 @@ movies/Trainspotting (1996) [tmdbid-627]
 movies/Tron (1982) [tmdbid-97]
 movies/Sin City EXTENDED and UNRATED (2005) [1080p]
 movies/The Day of the Jackal (1973) [tmdbid-4909]
-movies/Arrival.2016.1080p
-movies/Interstellar (2014) [tmdbid-157336]
+movies/Monkey Man (2024) [tmdbid-560016]
 movies/Ghost in the Shell (1995) [tmdbid-9323]
 movies/Redline (2009) [tmdbid-71883]
-movies/Nosferatu (2024) [tmdbid-426063]
+movies/Bhavesh Joshi Superhero (2018) [tmdbid-527511]
 movies/Uri The Surgical Strike 2019
-movies/The Death Of Stalin (2017) [BluRay] [1080p] [YTS.AM]
 movies/Ardh Satya (1983) [tmdbid-103073]
+movies/Kumari 21F (2015) [tmdbid-369949]
 movies/Dune.World.2021.1080p.AMZN.WEBRip.1400MB.DD2.0.x264-GalaxyRG[TGx]
 movies/Gully Boy (2019) [tmdbid-491625]
 books
@@ -184,12 +185,22 @@ books/Robert Jordan, Brandon Sanderson/The Wheel of Time/10 - Crossroads of Twil
 books/Frederick Forsyth
 books/Frederick Forsyth/The Day of the Jackal
 books/Sharyn McCrumb
+books/Sally Rooney
+books/Sally Rooney/Normal People
 books/Robert Jordan, Teresa Patterson
 books/Robert Jordan, Teresa Patterson/The World of Robert Jordan's The Wheel of Time
 books/Kai Bird, Martin J. Sherwin
 books/Kai Bird, Martin J. Sherwin/American Prometheus
 books/Neil Gaiman
 books/Neil Gaiman/American Gods
+books/Ian Esselmont
+books/Ian Esselmont/Novels of the Malazan Empire
+books/Ian Esselmont/Novels of the Malazan Empire/Vol 4 - Orb Sceptre Throne
+books/Ian Esselmont/Novels of the Malazan Empire/Vol 1 - Night of Knives
+books/Ian Esselmont/Novels of the Malazan Empire/Vol 5 - Blood and Bone
+books/Ian Esselmont/Novels of the Malazan Empire/Vol 2 - Return of the Crimson Guard
+books/Ian Esselmont/Novels of the Malazan Empire/Vol 6 - Assail
+books/Ian Esselmont/Novels of the Malazan Empire/Vol 3 - Stonewielder
 books/Terry Pratchett
 books/Terry Pratchett/Discworld {Steven Briggs}
 books/Terry Pratchett/Discworld {Steven Briggs}/6 Wyrd Sisters {Cilia Embry} Clear sound
@@ -333,6 +344,7 @@ books/Brandon Sanderson/Cosmere/Cosmere 13 - Mistborn 5 - Shadows of Self
 books/Brandon Sanderson/Cosmere/Cosmere 5 - Mistborn 3.5 - Secret History
 books/Brandon Sanderson/Cosmere/Cosmere 16 - Warbreaker
 books/Brandon Sanderson/Cosmere/Cosmere 14 - Mistborn 6 - The Bands of Mourning
+books/Brandon Sanderson/Cosmere/Cosmere 23 - The Stormlight Archive 5 - Wind and Truth
 books/Brandon Sanderson/Cosmere/Cosmere 11 - Mistborn 4 - The Alloy of Law
 books/Brandon Sanderson/Cosmere/Cosmere 12 - Mistborn 4.5 - Allomancer Jak and the Pits of Eltania
 books/Brandon Sanderson/Cosmere/Cosmere 10 - Sixth of the Dusk
@@ -347,7 +359,6 @@ books/Brandon Sanderson/Cosmere/Cosmere 17 - The Stormlight Archive 1 - The Way 
 books/Brandon Sanderson/Cosmere/Cosmere 6 - Elantris 1 - Elantris
 books/Brandon Sanderson/Cosmere/Cosmere 3 - Mistborn 3 - The Hero of Ages
 books/Brandon Sanderson/Cosmere/Cosmere 22 - The Stormlight Archive 4 - Rhythm of War
-books/Brandon Sanderson/Cosmere/Cosmere 23-25 - White Sand 1-3 - Volume 1-3
 books/Brandon Sanderson/Cosmere/Cosmere 21 - The Stormlight Archive 3.5 - Dawnshard
 books/Brandon Sanderson/Cosmere/Cosmere 19 - The Stormlight Archive 2.5 - Edgedancer
 books/Robin Sloan
@@ -360,11 +371,11 @@ tv/Twin Peaks (1990) [tvdbid-70533]/Season 01
 tv/Twin Peaks (1990) [tvdbid-70533]/Season 03
 tv/Westworld (2016) [tvdbid-296762]
 tv/Westworld (2016) [tvdbid-296762]/Season 01
-tv/Leverage (2008) [tvdbid-82339]
-tv/Leverage (2008) [tvdbid-82339]/Season 01
 tv/True Detective (2014) [tvdbid-270633]
 tv/True Detective (2014) [tvdbid-270633]/Season 01
 tv/True Detective (2014) [tvdbid-270633]/Specials
+tv/Dabba Cartel (2025) [tvdbid-459826]
+tv/Dabba Cartel (2025) [tvdbid-459826]/Season 01
 tv/The Twilight Zone (1959) [tvdbid-73587]
 tv/The Twilight Zone (1959) [tvdbid-73587]/Season 01
 tv/The Twilight Zone (1959) [tvdbid-73587]/Season 01/The.Twilight.Zone.1959.S01E31.1080p.BluRay.x265-RARBG
@@ -417,10 +428,6 @@ tv/Tom.and.Jerry.The.Golden.Collection.Volume.One.1940-1948
 tv/Tom.and.Jerry.The.Golden.Collection.Volume.One.1940-1948/Season 1940
 tv/Cosmos (1980)
 tv/Cosmos (1980)/Cosmos (1980) Season 01
-tv/Chernobyl (2019) [tvdbid-360893]
-tv/Chernobyl (2019) [tvdbid-360893]/Season 01
-tv/Hannibal (2013) [tvdbid-259063]
-tv/Hannibal (2013) [tvdbid-259063]/Season 01
 tv/One Piece (2023) [tvdbid-392276]
 tv/One Piece (2023) [tvdbid-392276]/Season 01
 tv/Blackadder (1983) [tvdbid-76736]
@@ -433,14 +440,7 @@ tv/Orangutan Jungle School (2018) [tvdbid-351489]
 tv/Orangutan Jungle School (2018) [tvdbid-351489]/Season 02
 tv/Orangutan Jungle School (2018) [tvdbid-351489]/Season 01
 tv/Orangutan Jungle School (2018) [tvdbid-351489]/Season 03
-tv/Ozark (2017) [tvdbid-329089]
-tv/Ozark (2017) [tvdbid-329089]/Season 01
 anime
-anime/KONOSUBA - God's blessing on this wonderful world! (2016)
-anime/KONOSUBA - God's blessing on this wonderful world! (2016)/Season 02
-anime/KONOSUBA - God's blessing on this wonderful world! (2016)/Season 01
-anime/KONOSUBA - God's blessing on this wonderful world! (2016)/Season 03
-anime/KONOSUBA - God's blessing on this wonderful world! (2016)/Specials
 anime/Sunabozu (2004)
 anime/Sunabozu (2004)/Season 01
 anime/Planetes (2003)
@@ -460,6 +460,11 @@ anime/Samurai Champloo (2004)/Season 01
 anime/Detroit Metal City (2008)
 anime/Detroit Metal City (2008)/Season 01
 anime/Detroit Metal City (2008)/Specials
+anime/The Elusive Samurai (2024) [tvdbid-432455]
+anime/The Elusive Samurai (2024) [tvdbid-432455]/Season 01
+anime/My Dress-Up Darling (2022) [tvdbid-401233]
+anime/My Dress-Up Darling (2022) [tvdbid-401233]/Season 02
+anime/My Dress-Up Darling (2022) [tvdbid-401233]/Season 01
 anime/ODDTAXI (2021)
 anime/ODDTAXI (2021)/Season 01
 anime/Ghost in the Shell
@@ -469,13 +474,6 @@ anime/Ghost in the Shell/Specials
 anime/Kaiji
 anime/Kaiji/Season 02
 anime/Kaiji/Season 01
-anime/The Apothecary Diaries
-anime/The Apothecary Diaries/Season 02
-anime/The Apothecary Diaries/Season 01
-anime/Hajime no Ippo (2000)
-anime/Hajime no Ippo (2000)/Season 02
-anime/Hajime no Ippo (2000)/Season 01
-anime/Hajime no Ippo (2000)/Season 03
 anime/Steins;Gate (2011)
 anime/Steins;Gate (2011)/Season 01
 anime/Steins;Gate (2011)/Specials
@@ -484,10 +482,16 @@ anime/His and Her Circumstances (1998)/Season 01
 anime/Death Parade (2015)
 anime/Death Parade (2015)/Season 01
 anime/Death Parade (2015)/Specials
+anime/Beelzebub (2011) [tvdbid-219771]
+anime/Beelzebub (2011) [tvdbid-219771]/Season 01
 anime/Mushi-Shi (2005)
 anime/Mushi-Shi (2005)/Season 02
 anime/Mushi-Shi (2005)/Season 01
 anime/Mushi-Shi (2005)/Specials
+anime/Nichijou My Ordinary Life (2011) [tvdbid-240291]
+anime/Nichijou My Ordinary Life (2011) [tvdbid-240291]/Season 01
+anime/Nichijou My Ordinary Life (2011) [tvdbid-240291]/Specials
+vids/Hermeto Pascoal - Música da Lagoa (Sinfonia do Alto Ribeira, 1985).mp4
 vids/JoJos Bizarre Adventure Overdrive (Instrumental recreation).mp4
 vids/video0.mp4
 vids/A humble attempt to play along with C418- Aria Math #minecraft.mkv
@@ -546,6 +550,8 @@ vids/From the Dark/Let's Play Dark Souls From the Dark part 39.mkv
 vids/From the Dark/Let's Play Dark Souls From the Dark part 36.mkv
 vids/From the Dark/Let's Play Dark Souls From the Dark part 42.mkv
 vids/From the Dark/Let's Play Dark Souls From the Dark part 24.mkv
+vids/電磁祭囃子 in NEO TOKYO 🏮.mp4
+vids/Good Mood Blues _ Harmonica Tab.mp4
 vids/y2mate.com - king_crimson_epitaph_hq_cLUzl-N8FNc_720p.mp4
 vids/Y2Mate.is - Mareux - The Perfect Girl-V1l6kxQNq54-720p-1655923143769.mp4
 vids/redditsave.com_true_gamber-jinnmam2axl91.mp4
@@ -558,11 +564,15 @@ vids/Team Fortress 2 Full Soundtrack (1080pHD).mp4
 vids/Pornography_The Musical.mp4
 vids/government hooker 1080.mp4
 vids/Song of Storms on an old-ass organ. 1080.mp4
+vids/you ain't ever seen a walking bass.mp4
+vids/TAKE FIVE.mp4
 vids/redditsave.com_all_my_apes_are_gone-ppa3l5g48w191.mp4
 vids/'Samurai Champloo - Shiki No Uta' (Nujabes) - The Brotet.mp4
+vids/_Real To Me_ by The Gentlemen Vocal and Guitar Cover (Grunge_Lo-fi).mp4
 vids/blincat.mp4
 vids/yt1s.com - Hannibal NBC Medley on the Harp Main Theme Love Crime Goldberg Variations_v720P.mp4
 vids/Mads Mikkelsen smoking and drinking Coca-Cola  - After Dark.mkv
 vids/06807.Luna.JazzsVids.Replay_Studios-Anime.s.Got.Talent.amvnews.ru.mp4
+vids/Tasin-হায় হায়(Hai Hai)_Official bangla lyrical video music_2021.mp4
 vids/BACKER.mp4
 vids/Vanilla - Summer.mp4
