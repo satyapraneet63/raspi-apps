@@ -65,6 +65,8 @@ def process_file(full_path, file):
 def collect_media_files(root_path):
     targets = []
     for dirpath, _, filenames in os.walk(root_path, followlinks=True):
+        if '/books' in dirpath:
+            continue  # Skip the books folder entirely
         for file in filenames:
             if file.lower().endswith(VALID_EXTENSIONS):
                 full_path = os.path.join(dirpath, file)
