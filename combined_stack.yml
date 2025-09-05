@@ -181,7 +181,7 @@ services:
     environment:
       PYTHONUNBUFFERED: 1
     command: >
-      -v /w:rw
+      -v /w
       --auth=${COPYPARTY_AUTH}
 
 networks:
