@@ -180,9 +180,6 @@ services:
       - ${MOUNT_POINT}:/w   # Shared folder (choose actual folder)
     environment:
       PYTHONUNBUFFERED: 1
-    command: >
-      -v /w
-      --auth=${COPYPARTY_AUTH}
 
 networks:
   default:
