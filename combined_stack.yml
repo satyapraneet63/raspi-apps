@@ -180,9 +180,10 @@ services:
       - ${MOUNT_POINT}:/w   # Shared folder (choose actual folder)
     environment:
       PYTHONUNBUFFERED: 1
-      
+
   watchtower:
     image: containrrr/watchtower
+    container_name: watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 
